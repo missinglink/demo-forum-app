@@ -1,0 +1,47 @@
+.topics-list {
+	.list;
+	.type-margin(-20, -20);
+
+	li {
+		border-bottom: @default-ruler-border;
+		.type-padding(20, 20);
+
+		&:last-child {
+			border-bottom: 0;
+		}
+
+		.time {
+			.inline-block;
+			float: right;
+			margin-top: 0;
+		}
+	}
+}
+
+.layout-mobile {
+
+	.topics-list {
+
+		li .time {
+			float: inherit;
+			display: block;
+			.type-margin-top(10);
+		}
+	}
+}
+
+.pagination {
+	.clearfix;
+
+	.button {
+		margin-bottom: 0;
+	}
+
+	.prev {
+		float: left;
+	}
+
+	.next {
+		float: right;
+	}
+}

@@ -1,0 +1,41 @@
+body {
+    background: @color-background url(../../assets/bg.png);
+    margin: 0;
+
+    @media (max-width: @limit-mobile-width) {
+        .layout-mobile;
+    }
+
+    @media (min-width: @limit-mobile-width) and (max-width: @limit-desktop-width) {
+        .layout-tablet;
+    }
+
+    @media (min-width: @limit-desktop-width) {
+        .layout-desktop;
+    }
+}
+
+// .page-width
+
+.page-width {
+    margin: auto;
+    .clearfix;
+    width: 900px;
+}
+
+.layout-tablet { .page-width {
+    width: 600px;
+} }
+
+.layout-mobile { .page-width {
+    width: auto;
+    margin: @unit;
+    margin-top: 0;
+} }
+
+.section {
+    background: #fff;
+    padding: @dub-unit;
+    .rounded-corners(2px);
+    .type-margin-bottom(20);
+}

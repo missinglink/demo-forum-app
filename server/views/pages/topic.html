@@ -1,0 +1,51 @@
+<div class="page-width">
+
+	<div class="section">
+
+		{{^topic}}
+
+			<h1 class="ruled">This topic doesn't exist</h1>
+			<h3><em>It's time for you to stop playing with the routes, it ain't funny!</em></h3>
+
+		{{/topic}}
+		{{#topic}}
+
+			<h1>{{title}} <span class="meta">Posted {{created-date}} by {{#has-email}}<a href="mailto:{{email}}">{{name}}</a>{{/has-email}}{{^has-email}}<strong>{{name}}</strong>{{/has-email}}</span></h1>
+
+			<blockquote>
+				<pre>{{{text}}}</pre>
+			</blockquote>
+
+			<h2 class="ruled">Replies <span class="meta">({{replies-count}})</span></h2>
+
+			{{^replies}}
+				<span class="pre-fill">There are no replies to this topic yet. Be the first!</span>
+			{{/replies}}
+			{{#replies}}
+				<blockquote>
+
+					<pre>{{{text}}}</pre>
+
+					<div class="reply-meta">
+						<span class="info">
+							Posted {{created-date}} by {{#has-email}}<a href="mailto:{{email}}">{{name}}</a>{{/has-email}}{{^has-email}}<strong>{{name}}</strong>{{/has-email}}
+						</span>
+						<span class="actions">
+							<a href="{{base-dir}}rate-reply/{{topic-id}}/{{_id}}/like">Like</a> | <a href="{{base-dir}}rate-reply/{{topic-id}}/{{_id}}/dislike">Dislike</a> | <strong>Score: {{rank}}</strong>
+						</span>
+					</div>
+
+				</blockquote>
+			{{/replies}}
+
+			<hr />
+
+			<h2 class="ruled">Leave a reply</h2>
+
+			{{> partials/forms/reply }}
+
+		{{/topic}}
+
+	</div>
+
+</div>

@@ -1,0 +1,126 @@
+input[type="button"], button, input[type="reset"] {
+    .button;
+}
+
+input[type="submit"], input[type="reset"] {
+    .cta;
+}
+
+label {
+    color: @color-type-grey;
+    display: block;
+    .type-margin(1, 5);
+}
+
+.text-input-style-active() {
+    outline: none;
+    .shadow(0, 0, 0, 2px, fade(@color-highlight, 10%));
+}
+
+.text-input-style() {
+    .type-margin-bottom(10);
+    .rounded-corners(@component-roundness);
+    border: 1px solid #cfcfcf;
+    .inner-shadow(0, 2px, 1px, -1px, rgba(0, 0, 0, 0.1));
+    padding: @half-unit;
+    min-width: 200px;
+    font-family: @type-face-inputs;
+    .type-size(@type-size-inputs);
+    color: @type-color-inputs;
+
+    &:focus {
+        .text-input-style-active();
+    }
+}
+
+.full-width-form {
+    margin-right: @unit;
+
+    input[type="text"], input[type="password"], input[type="email"], textarea {
+        width: 100%;
+    }
+}
+
+select, input[type="file"] {
+    .type-margin(10, 10);
+}
+
+input[type="text"], input[type="password"], input[type="email"], textarea {
+    .text-input-style();
+}
+
+textarea {
+    min-height: 90px;
+    resize: vertical;
+}
+
+.input-placeholder-style () {
+    color: #a2a2a2;
+}
+
+::-webkit-input-placeholder {
+    .input-placeholder-style;
+}
+
+:-moz-placeholder {
+    .input-placeholder-style;
+}
+
+.validation-error {
+    display: block;
+    color: @color-type-error;
+    .type-size(11);
+    .type-margin(5, 5);
+}
+
+.buttons-right {
+    text-align: right;
+
+    .button, input[type="button"], input[type="submit"], button[type="submit"], input[type="reset"], button[type="reset"] {
+        margin: 0;
+        margin-left: @unit;
+    }
+}
+
+.layout-desktop {
+
+    form.full-width {
+
+        input[type="text"], input[type="password"], input[type="email"], textarea {
+            width: 567px;
+
+            &.no-stretch {
+                width: auto;
+            }
+        }
+    }
+}
+
+.layout-tablet {
+
+    form.full-width {
+
+        input[type="text"], input[type="password"], input[type="email"], textarea {
+            width: 368px;
+
+            &.no-stretch {
+                width: auto;
+            }
+        }
+    }
+}
+
+.field {
+    padding: @half-unit;
+    background: fade(@color-type-grey, 10%);
+    .rounded-corners(@block-roundness);
+}
+
+// Topic form
+
+.topic-form {
+    
+    textarea {
+        margin-bottom: 0;
+    }
+}

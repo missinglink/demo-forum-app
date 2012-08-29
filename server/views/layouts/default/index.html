@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;"/>
+    <title> Liquidimage - {{title}} </title>
+    <link rel="stylesheet/less" type="text/css" href="{{base-dir}}style/main.less">
+    {{> layouts/default/includes}}
+</head>
+<body>
+
+    <!--[if lte IE 8]>
+        <div class="ie-warning">
+            <p>
+                Wondering why this page displays like a pile of crap? I'm an awful browser and you shoud have stopped using me ages ago. Please do yourself a favor and <a href="https://www.google.com/intl/en/chrome/browser/" target="_blank">Download Chrome</a>, or at least <a href="http://www.beautyoftheweb.co.uk/" target="_blank">Upgrade me</a>..
+            </p>
+            <a href="#" class="close" data-role="close"></a>
+        </div>
+    <![endif]-->
+
+    {{> layouts/default/header}}
+
+    <div class="page-width">
+        {{{body}}}
+    </div>
+
+    {{> layouts/default/footer}}
+    {{> layouts/default/templates}}
+</body>
+</html>

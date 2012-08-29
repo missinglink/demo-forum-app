@@ -1,0 +1,28 @@
+<div class="page-width">
+
+	<div class="section">
+
+		<h1 class="ruled">Recent topics</h1>
+
+		{{> partials/components/toolbar }}
+
+		<hr />
+
+		{{#has-topics}}
+			{{> partials/components/topics-list }}
+		{{/has-topics}}
+
+		{{^has-topics}}
+			<div class="pre-fill">
+				There are no topics.
+			</div>
+		{{/has-topics}}
+
+		<hr />
+
+		{{> partials/components/pagination }}
+
+
+	</div>
+
+</div>

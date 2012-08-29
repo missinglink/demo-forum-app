@@ -1,0 +1,11 @@
+<ul class="topics-list">
+	{{#topics}}
+		<li>
+
+			<a href="topic/{{slug}}">{{title}}</a> <span class="pre-fill">({{replies-count}} replies)</span>
+
+			<span class="time">Posted {{created-date}} by {{#has-email}}<a href="mailto:{{email}}">{{name}}</a>{{/has-email}}{{^has-email}}<strong>{{name}}</strong>{{/has-email}}</span>
+		
+		</li>
+	{{/topics}}
+</ul>

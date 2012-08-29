@@ -1,0 +1,173 @@
+html {
+    font-size: @type-root;
+}
+
+body {
+    color: @color-type-body;
+    .type-size(@type-size-body);
+    font-family: @type-face-body;
+}
+
+a img {
+    border: 0;
+}
+
+.type-size(@size) {
+    font-size: @size * 1px;
+    font-size: @size * 1rem / 10;
+}
+
+.type-padding-top(@value) {
+    padding-top: @value * 1px;
+    padding-top: @value * 1rem / 10;
+}
+
+.type-padding-bottom(@value) {
+    padding-bottom: @value * 1px;
+    padding-bottom: @value * 1rem / 10;
+}
+
+.type-padding(@val-top, @val-bottom) {
+    .type-padding-top(@val-top);
+    .type-padding-bottom(@val-bottom);
+}
+
+.type-margin-top(@value) {
+    margin-top: @value * 1px;
+    margin-top: @value * 1rem / 10;
+}
+
+.type-margin-bottom(@value) {
+    margin-bottom: @value * 1px;
+    margin-bottom: @value * 1rem / 10;
+}
+
+.type-margin(@val-top, @val-bottom) {
+    .type-margin-top(@val-top);
+    .type-margin-bottom(@val-bottom);
+}
+
+a {
+    color: @color-type-link;
+    font-weight: bold;
+    text-decoration: none;
+
+    &:hover {
+        color: @color-type-link-hover;
+    }
+}
+
+hr {
+    border: 0;
+    height: 0;
+    .type-margin(20, 20);
+    border-bottom: @default-ruler-border;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: @type-face-header;
+    color: @color-type-header;
+    font-weight: 100;
+    margin-top: 0;
+    font-weight: bold;
+    text-align: left;
+
+    .meta {
+        .inline-block;
+        color: #8a8a8a;
+        margin-left: @half-unit;
+    }
+
+    &.ruled {
+        border-bottom: @default-ruler-border;
+        .type-padding-bottom(20);
+    }
+}
+
+h1, .h1 {
+    .type-size(@type-size-h1);
+    text-align: center;
+    color: @color-highlight;
+    font-weight: 100;
+    .opacity(0.99);
+}
+
+h2, .h2 {
+    .type-size(@type-size-h2);
+}
+
+h3, .h3 {
+    .type-size(@type-size-h3);
+}
+
+h4, .h4 {
+    .type-size(@type-size-h4);
+}
+
+h5, .h5 {
+    .type-size(@type-size-h5);
+}
+
+h6, .h6 {
+    .type-size(@type-size-h6);
+}
+
+.light {
+    color: @color-type-grey-light;
+}
+
+.pre-fill {
+    .light;
+    font-style: italic;
+}
+
+.boxed {
+    display: block;
+    background: #ECECEC;
+    padding: @unit @dub-unit;
+    .rounded-corners(@block-roundness);
+    .type-margin(0, 20);
+}
+
+blockquote {
+    margin: 0;
+    .boxed;
+    padding: @dub-unit;
+    font-family: @type-face-body;
+    .type-size(16);
+    color: @color-type-grey;
+    position: relative;
+
+    pre {
+        font-family: @type-face-body;
+        .type-size(16);
+        .type-margin(-5, -5);
+    }
+}
+
+p.pre-fill, div.pre-fill {
+    background: #eee;
+    padding: @unit;
+    .rounded-corners(2px);
+    color: darken(@color-type-grey-light, 3%);
+}
+
+.h-ruled {
+    .inline-block;
+    margin-right: @unit;
+    padding-right: @unit;
+    border-right: 1px solid fade(#fff, 6%);
+    .shadow(1px, 0, 0, 0, fade(#000, 10%));
+}
+
+.v-ruled {
+    margin-bottom: @unit;
+    padding-bottom: @unit;
+    border-bottom: 1px solid fade(#fff, 30%);
+    .shadow(0, 1px, 0, 0, fade(#000, 10%));
+}
+
+ul {
+    list-style-type: square;
+    padding-left: @dub-unit;
+}
