@@ -1,16 +1,16 @@
 <div class="full-width-form">
-	<form action="{{base-dir}}add-reply" data-validates action="component.comment.add" method="post">
+	<form action="{{base-dir}}add-reply" action="component.comment.add" method="post">
 
 		<input type="hidden" name="reply[topic-id]" value="{{_id}}" />
 
 		<label for="reply[name]">Name:</label>
-		<input data-validate="minLength: 3" type="text" name="reply[name]" placeholder="John Doe" />
+		<input type="text" name="reply[name]" placeholder="John Doe" />
 
 		<label for="reply[email]">Email:</label>
-		<input data-validate="type: email" type="email" name="reply[email]" placeholder="john@doe.com" />
+		<input type="email" name="reply[email]" placeholder="john@doe.com" />
 
 		<label for="reply[text]">Message:</label>
-		<textarea data-validate="required: true" placeholder="Type a reply" name="reply[text]"></textarea>
+		<textarea placeholder="Type a reply" name="reply[text]"></textarea>
 
 		<hr />
 
