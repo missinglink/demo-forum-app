@@ -43,7 +43,7 @@ TopicSchema = new mongoose.Schema
 
 TopicSchema.statics.process = processTopic = (topic) ->
 	topic['replies-count'] = topic.replies.length
-	topic['created-date'] = moment().add(topic.created).fromNow()
+	topic['created-date'] = moment(new Date(topic.created)).fromNow()
 	topic['topic-id'] = topic._id
 	if topic.email is '' then topic['has-email'] = false else topic['has-email'] = true
 

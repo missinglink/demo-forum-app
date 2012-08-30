@@ -1,1 +1,1 @@
-web: node server/bootstrap.js
+web: coffee server/bootstrap.coffee
